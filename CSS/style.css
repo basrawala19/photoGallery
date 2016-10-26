@@ -34,6 +34,14 @@ img{
 	border-color:grey;
 }
 
+img.logo {
+  height: 60px;
+  width: 320px;
+  border:0.5em;
+	#border-radius:2em;
+
+}
+
 img.preview{
 	border:0.5em;
 	border-style:dotted;
@@ -48,19 +56,23 @@ body{
 	line-height:15px;
 	background-image: url("http://localhost/CodeIgniter_2.2.0/brown.jpg");
   #background-color:red;
+  color:#FAEBD7;
 }
 
 
 
 
 a,span{
-	color:#DEB887;
-	font-weight: bolder;
-	font-size: 15;
+	#color:#DEB887;
+  color:#FAEBD7;
+	font-weight: lighter;;
+	font-size: 17;
 }
 
 a:hover {
 	color:#FAEBD7;
+  font-size: 17.5;
+  font-weight:600;
 }
 
 #main{
@@ -98,7 +110,7 @@ li{
         position: absolute ;
         top:0px;
         left:0px;
-	background-color:#1A446c;
+	background-color:#1A449D;
 
 }
 
@@ -143,9 +155,10 @@ li{
 	margin:0em;
   margin-bottom: 0em;
 	font-family:"Courier New", Courier, monospace;
-	#font-size:14px;
-	font-weight: bolder;
-	color:#DEB887;
+	font-size:16;
+	font-weight:bolder;;
+	#color:#DEB887;
+  color:#FAEBD7;
 
 }
 

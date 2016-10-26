@@ -47,7 +47,7 @@
 	#body{
 		margin: 0 15px 0 15px;
 	}
-	
+
 	p.footer{
 		text-align: right;
 		font-size: 11px;
@@ -56,7 +56,7 @@
 		padding: 0 10px 0 10px;
 		margin: 20px 0 0 0;
 	}
-	
+
 	#container{
 		margin: 10px;
 		border: 1px solid #D0D0D0;
@@ -67,7 +67,7 @@
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+	<!-- <h1>Welcome to CodeIgniter!</h1>
 
 	<div id="body">
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
@@ -79,7 +79,10 @@
 		<code>application/controllers/welcome.php</code>
 
 		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-	</div>
+	</div> -->
+	<?php
+		redirect( "http://localhost/CodeIgniter_2.2.0/index.php/gallery_index/index/" ) ;
+	?>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
 </div>

@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
     //alert("fs");
-    $('div#status').on("click", function (e) {
+
+    $('a#status1').on("click", function (e) {
 
         //alert("sdf");
         e.preventDefault();
@@ -17,6 +18,36 @@ $(document).ready(function(){
             }); // fancybox
       });
 
+    $('.logo').on("mouseover", function ( ) {
+      //alert("gd") ;
+      //var img = $(".logo");
+      $(this).height(60);
+      $(this).width(330);
+      //height: 60px;
+      //width: 320px;
+
+          //alert(img.width());
+          //img.animate({width: "340px", height: "70px"});
+          //alert(img.width());
+    });
+
+    $('.logo').on("mouseout", function ( ) {
+
+
+      $(this).height(60);
+      $(this).width(320);
+
+      //alert("gd") ;
+      //var img = $(".logo");
+
+      //height: 60px;
+      //width: 320px;
+
+          //alert(img.width());
+          //img.animate({width: "320px", height: "60px"});
+          //alert(img.width());
+    });
+
     $('button').on('click',function(e){
 
           $("#l_form").submit(function() { return false; });
@@ -25,7 +56,7 @@ $(document).ready(function(){
           var pwd = $('#l_password').val();
           var form = '#l_form';
           var pr ='lpr' ;
-          var urll = 'http://localhost/CodeIgniter_2.2.0/index.php/admin/login_model_window/index/?username='+unlen+'&password='+pwd;
+          var urll = 'http://localhost/photoGallery/index.php/admin/login_model_window/index/?username='+unlen+'&password='+pwd;
 
         document.getElementById('lpr').innerHTML = "";
         flag = 1 ;
@@ -64,7 +95,7 @@ $(document).ready(function(){
                     $(this).before("<strong>Success! You are directed towards admin site ....:)</strong>");
                     setTimeout("$.fancybox.close()", 1000);
                     setTimeout( function(){
-                      window.location = "http://localhost/CodeIgniter_2.2.0/index.php/admin/admin_index/";
+                      window.location = "http://localhost/photoGallery/index.php/admin/admin_index/";
                     },1000);
                   });
                 }

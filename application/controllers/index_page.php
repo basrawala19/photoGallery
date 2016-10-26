@@ -4,7 +4,12 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
 class Index_page extends CI_Controller{
 
     public function index (  ) {
-    //  $this->load->view();
+
+       $this->load->helper('url') ;
+       $provider = provider_not_connected( ) ;
+       $service = is_logged_in ( $provider ) ;
+       $user_profile = $service->getUserProfile( ) ;
+
        $this->load->view('photo_gallery/headers');?>
        <?php
        $url = base_url( ) ;
@@ -13,7 +18,9 @@ class Index_page extends CI_Controller{
         <div id="main">
             <div id="status">
             Welcome &nbsp;&nbsp;&nbsp;
-            <a href="<?php echo $url."admin/login/index";?>">Admin Login</a>
+            <?php echo "<a href='" .$user_profile->profileURL."'>". $user_profile->firstName ."</a>"   ?> &nbsp;&nbsp;&nbsp;
+
+            <?php echo "<a href='" .$url."hauth/logout/".$provider."'>Logout</a>"   ?> &nbsp;&nbsp;&nbsp;
             </div>
             <input type="hidden" id="gallery_name" value="<?php echo $_GET['gallery_name']; ?>" />
             <?php
@@ -29,8 +36,7 @@ class Index_page extends CI_Controller{
             <?php foreach ($photos as $photo ) : ?>
 
 
-                    <a href="http://localhost/CodeIgniter_2.2.0/index.php/photo/index/?id=<?php echo $photo->id ; ?>" ><span style="padding-left:6em;"  class="photos" id=<?php echo $photo->id; ?>><img class="p" id=<?php echo $photo->id; ?> src="http://localhost/CodeIgniter_2.2.0/<?php echo $photo->image_path()?>" width='400' height ='300' vspace="10" hspace="2"/></span></a>
-
+                    <a href="http://localhost/photoGallery/index.php/photo/index/?id=<?php echo $photo->id ; ?>&gallery_name=<?php echo $_GET['gallery_name']; ?>" ><span style="padding-left:6em;"  class="photos" id=<?php echo $photo->id; ?>><img class="p" id=<?php echo $photo->id; ?> src="http://localhost/photoGallery/<?php echo $photo->image_path()?>" width='400' height ='300' vspace="10" hspace="2"/></span></a>
             <?php endforeach ; ?>
             </div>
               <div style="clear:both; padding:2em 4em;">

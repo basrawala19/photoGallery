@@ -7,7 +7,7 @@ $(document).ready(function(){
         var user_id = $('#user_id').val( );
         var body = $('#body').val();
         var photo_id = $('#photo_id').val();
-        var urll = 'http://localhost/CodeIgniter_2.2.0/index.php/admin/post_comment/index/?user_id='+user_id+'&body='+body+'&photo_id='+photo_id;
+        var urll = 'http://localhost/photoGallery/index.php/admin/post_comment/index/?user_id='+user_id+'&body='+body+'&photo_id='+photo_id;
       document.getElementById('pr').innerHTML = "";
       flag = 1 ;
       //alert(photo_id);

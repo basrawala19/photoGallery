@@ -56,7 +56,7 @@ $(document).ready(function(){
           var pwd = $('#l_password').val();
           var form = '#l_form';
           var pr ='lpr' ;
-          var urll = 'http://localhost/CodeIgniter_2.2.0/index.php/admin/login_model_window/index/?username='+unlen+'&password='+pwd;
+          var urll = 'http://localhost/photoGallery/index.php/admin/login_model_window/index/?username='+unlen+'&password='+pwd;
 
         document.getElementById('lpr').innerHTML = "";
         flag = 1 ;
@@ -95,7 +95,7 @@ $(document).ready(function(){
                     $(this).before("<strong>Success! You are directed towards admin site ....:)</strong>");
                     setTimeout("$.fancybox.close()", 1000);
                     setTimeout( function(){
-                      window.location = "http://localhost/CodeIgniter_2.2.0/index.php/admin/admin_index/";
+                      window.location = "http://localhost/photoGallery/index.php/admin/admin_index/";
                     },1000);
                   });
                 }

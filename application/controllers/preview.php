@@ -29,7 +29,7 @@ class Preview extends CI_Controller{
 
       <div id="comment" align="center"><?php echo ($photo->name); ?></div>
       <br />
-      <div align="center"><img class="preview" src="http://localhost/CodeIgniter_2.2.0/<?php echo $photo->image_path()?>" height=400 width=600 /></div>
+      <div align="center"><img class="preview" src="http://localhost/photoGallery/<?php echo $photo->image_path()?>" height=400 width=600 /></div>
       <br />
       <?php
 
@@ -56,7 +56,7 @@ class Preview extends CI_Controller{
          <?php } ?><br /><br /><br />
 
        <?php if ( !isset($_GET['f']) ){
-            echo "<a href=\"http://localhost/CodeIgniter_2.2.0/index.php/photo/index/?id=".$id."&gallery_name=".$gallery_name."\" >See Full Image </a>";
+            echo "<a href=\"http://localhost/photoGallery/index.php/photo/index/?id=".$id."&gallery_name=".$gallery_name."\" >See Full Image </a>";
         } ?>
           <br /><br />
           <div id="pr"></div>

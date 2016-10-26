@@ -58,7 +58,7 @@ $(document).ready(function( ){
         $.ajax({
             type: "POST",
             cache: false,
-            url: 'http://localhost/CodeIgniter_2.2.0/index.php/preview/index/?id='+id+'&gallery_name='+gallery_name, // success.php
+            url: 'http://localhost/photoGallery/index.php/preview/index/?id='+id+'&gallery_name='+gallery_name, // success.php
             success: function (data) {
             // on success, post returned data in fancybox
             $.fancybox(data, {
@@ -84,7 +84,7 @@ $(document).ready(function( ){
             $.ajax({
                 type: "POST",
                 cache: false,
-                url: 'http://localhost/CodeIgniter_2.2.0/index.php/preview/index/?id='+id+'&f=1', // success.php
+                url: 'http://localhost/photoGallery/index.php/preview/index/?id='+id+'&f=1', // success.php
                 success: function (data) {
                 // on success, post returned data in fancybox
                 $.fancybox(data, {
@@ -112,7 +112,7 @@ $(document).ready(function( ){
                 $.ajax({
                   type: "POST",
                   cache: false,
-                  url: 'http://localhost/CodeIgniter_2.2.0/index.php/gallery_images/index/?gallery_name='+gallery_name, // success.php
+                  url: 'http://localhost/photoGallery/index.php/gallery_images/index/?gallery_name='+gallery_name, // success.php
                   success: function (data) {
                     //alert(jQuery(data).find('#ajax-data'));
                     jQuery('#target').html(data) ;

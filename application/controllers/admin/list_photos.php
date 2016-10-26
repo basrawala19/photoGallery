@@ -44,7 +44,7 @@ class List_photos extends CI_Controller{
                 ?>
 
                 <tr><td align="center" width="300">
-                <a href=""><img  class="photos"  id=<?php echo $photo->id ; ?> src="<?php echo "http://localhost/CodeIgniter_2.2.0/".$photo->image_path(); ?>" width="300" height="200" /></a></td>
+                <a href=""><img  class="photos"  id=<?php echo $photo->id ; ?> src="<?php echo "http://localhost/photoGallery/".$photo->image_path(); ?>" width="300" height="200" /></a></td>
                 <td align="center" width="400"><?php echo $photo->type ;?></td>
                 <td align="center" width="400"><?php $data = $photo->get_size($photo->size); echo $data[0].$data[1] ;?></td>
                 <td align="center" width="400"><a href="<?php echo $url."list_comment/index?id=".$photo->id ;?>"> <?php echo $comments ?> </a></td>

@@ -53,7 +53,7 @@ class Photo extends CI_Controller{
 
             <div id="photo" >
             <a href="<?php echo $url."index_page/index/?gallery_name=".$_GET['gallery_name']; ?>" >&laquo; Back</a><br /><br />
-            <img src="<?php echo "http://localhost/CodeIgniter_2.2.0/".$photo->image_path();?>" height="500" width="600"/>
+            <img src="<?php echo "http://localhost/photoGallery/".$photo->image_path();?>" height="500" width="600"/>
 
 
             <?php

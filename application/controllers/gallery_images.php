@@ -16,7 +16,7 @@ class Gallery_images extends CI_Controller{
     <?php foreach ($photos as $photo ) : ?>
 
 
-          <a class="fancybox" rel="<?php echo $_GET['gallery_name'];  ?>" href="http://localhost/CodeIgniter_2.2.0/<?php echo $photo->image_path()?>"><img src="http://localhost/CodeIgniter_2.2.0/<?php echo $photo->image_path()?>" width='400' height ='300' vspace="10" hspace="2"/></a>
+          <a class="fancybox" rel="<?php echo $_GET['gallery_name'];  ?>" href="http://localhost/photoGallery/<?php echo $photo->image_path()?>"><img src="http://localhost/CodeIgniter_2.2.0/<?php echo $photo->image_path()?>" width='400' height ='300' vspace="10" hspace="2"/></a>
 
     <?php endforeach ; ?>
   </div>

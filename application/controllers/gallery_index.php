@@ -3,11 +3,21 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class Gallery_index extends CI_Controller{
 
-    public function index (  ) {
-    //  $this->load->view();
+    public function index ( ) {
+
+       $this->load->helper('url') ;
+       $provider = provider_not_connected( ) ;
+       $service = is_logged_in ( $provider ) ;
+       $user_profile = $service->getUserProfile( ) ;
+       foreach ($user_profile as $key => $value) {
+         # code...
+         Hybrid_Logger::info($key." fgd " .$value) ;
+       }
        $this->load->view('photo_gallery/headers');
        $this->load->model('gallery');
+
        ?>
+
        <?php
        $url = base_url( ) ;
 
@@ -15,7 +25,9 @@ class Gallery_index extends CI_Controller{
         <div id="main">
             <div id="status">
             Welcome &nbsp;&nbsp;&nbsp;
-            <a href="<?php echo $url."admin/login/index";?>">Admin Login</a>
+            <?php echo "<a href='" .$user_profile->profileURL."'>". $user_profile->firstName ."</a>"   ?> &nbsp;&nbsp;&nbsp;
+
+            <?php echo "<a href='" .$url."hauth/logout/".$provider."'>Logout</a>"   ?> &nbsp;&nbsp;&nbsp;
             </div>
 
             <table border="0" cellspacing="4" cellpadding="6" width="1350" style="padding-left:7EM; padding-top:7EM;">

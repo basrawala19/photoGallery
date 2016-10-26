@@ -3,10 +3,11 @@ $(document).ready(function(){
   $('button').on('click',function(e){
       //alert("dsg");
       $("#comm_form").submit(function() { return false; });
-        var author = $('#author').val();
+        //var author = $('#author').val();
+        var user_id = $('#user_id').val( );
         var body = $('#body').val();
-        var photo_id = $('#id').val();
-        var urll = 'http://localhost/CodeIgniter_2.2.0/index.php/admin/post_comment/index/?author='+author+'&body='+body+'&photo_id='+photo_id;
+        var photo_id = $('#photo_id').val();
+        var urll = 'http://localhost/CodeIgniter_2.2.0/index.php/admin/post_comment/index/?user_id='+user_id+'&body='+body+'&photo_id='+photo_id;
       document.getElementById('pr').innerHTML = "";
       flag = 1 ;
       //alert(photo_id);

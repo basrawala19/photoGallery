@@ -5,7 +5,8 @@ class comment {
 
 	public $id ;
 	public $photo_id;
-	public $author;
+	//public $author;
+	public $user_id ;
 	public $body;
 	public $time_;
 
@@ -95,7 +96,7 @@ class comment {
 
 	public static function count_() {
 
-	        $database  = self:: get_instance_ ('databases') ;
+	  $database  = self:: get_instance_ ('databases') ;
 
 		$result = $database->query( "SELECT COUNT(*) FROM ".self::$table_name) ;
 		$row = mysqli_fetch_array( $result ) ;
@@ -108,7 +109,8 @@ class comment {
 
 		$id = self::count_() + 1 ;
 		$photo_id = $arr['photo_id'] ;
-		$author = empty($arr['author']) ? "anonymous" : $arr['author'] ;
+		//$author = empty($arr['author']) ? "anonymous" : $arr['author'] ;
+		$user_id = $arr['user_id'] ;
 		$body = $arr['body'] ;
 		$time_ = strftime("%Y-%m-%d %H:%M:%S",time());
 		//echo $time_ ;
@@ -116,7 +118,7 @@ class comment {
 			return 0;
 		}
 
-		$sql = "INSERT INTO ".self::$table_name." VALUES ('".$id."', '".$photo_id."', '".$author."', '".$body."', '";
+		$sql = "INSERT INTO ".self::$table_name." VALUES ('".$id."', '".$photo_id."', '".$user_id."', '".$body."', '";
 		$sql .= $time_."')" ;
 
 		$result = $database->query($sql) ;

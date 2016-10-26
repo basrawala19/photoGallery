@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
     //alert("fs");
-    $('div#status').on("click", function (e) {
+
+    $('a#status1').on("click", function (e) {
 
         //alert("sdf");
         e.preventDefault();
@@ -16,6 +17,36 @@ $(document).ready(function(){
                 closeEffect: 'elastic'
             }); // fancybox
       });
+
+    $('.logo').on("mouseover", function ( ) {
+      //alert("gd") ;
+      //var img = $(".logo");
+      $(this).height(60);
+      $(this).width(330);
+      //height: 60px;
+      //width: 320px;
+
+          //alert(img.width());
+          //img.animate({width: "340px", height: "70px"});
+          //alert(img.width());
+    });
+
+    $('.logo').on("mouseout", function ( ) {
+
+
+      $(this).height(60);
+      $(this).width(320);
+
+      //alert("gd") ;
+      //var img = $(".logo");
+
+      //height: 60px;
+      //width: 320px;
+
+          //alert(img.width());
+          //img.animate({width: "320px", height: "60px"});
+          //alert(img.width());
+    });
 
     $('button').on('click',function(e){
 

@@ -3,3 +3,4 @@ settings/
 .txt
 .iml
 .git
+application/logs/hybridauth.log

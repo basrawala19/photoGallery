@@ -103,7 +103,7 @@ $(document).ready(function( ){
 
 
         $(document).on('click', 'span.gal', function(e) {
-              //alert("hatim");
+              alert("hatim");
               e.preventDefault(); // avoids calling success.php from the link
               //alert("hgh");
               var gallery_name = this.innerHTML;

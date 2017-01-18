@@ -288,13 +288,13 @@ class Hybrid_Auth
 	// --------------------------------------------------------------------
 
 
-	public function setUserId ( $id , $provider ){
+	public static function setUserId ( $id , $provider ){
 			Hybrid_Logger::info( "setting user id $id for provider $provider ");
 			Hybrid_Auth::storage()->set( "hauth_session.{$provider}.id" ,$id );
 
 	}
 
-	public function getUserId ( $provider ){
+	public static function getUserId ( $provider ){
 
 			$id = Hybrid_Auth::storage()->get( "hauth_session.{$provider}.id" );
 			Hybrid_Logger::info( "getting user id $id");

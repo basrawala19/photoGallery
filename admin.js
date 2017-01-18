@@ -42,7 +42,7 @@ $(document).ready(function(){
         var pr = 'c_pr' ;
         var form = '#c_form';
         var msg = "<strong>Success! User Created :)</strong>" ;
-        var urll = 'http://localhost/CodeIgniter_2.2.0/index.php/admin/create_user/index/?username='+unlen+'&password='+pwd+'&first_name='+fn+'&last_name='+ln
+        var urll = 'http://localhost/photoGallery/index.php/admin/create_user/index/?username='+unlen+'&password='+pwd+'&first_name='+fn+'&last_name='+ln
 
       }
       else if (  this.className == "e_button" ){

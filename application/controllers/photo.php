@@ -69,9 +69,9 @@ class Photo extends CI_Controller{
                 {
                   echo "<a href='".$ext_user->profileURL."'>".$ext_user->firstName."</a>" ;
                 }
-            ?> wrote
-            <br /><?php echo $cmt->body ; ?>
-            <br /><?php echo $cmt->time_ ;?><?php
+            ?> wrote on <?php echo date("d/m/Y", strtotime($cmt->time));?>
+            <br /><br /><?php echo $cmt->body ; ?>
+            <br /><?php
             }
 
             ?>

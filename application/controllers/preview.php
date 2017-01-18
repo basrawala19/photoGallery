@@ -13,7 +13,7 @@ class Preview extends CI_Controller{
       //$service = is_logged_in ( $provider ) ;
       //$user_profile = $service->getUserProfile( ) ;
       $user_id = Hybrid_Auth::getUserId( $provider ) ;
-      echo "user id is brand new and it's: ".$user_id ;
+      //echo "user id is brand new and it's: ".$user_id ;
       $this->load->view('photo_gallery/model_window_header');
       //echo ( $_GET['id'] ) ;
       $this->load->model('photograph');
@@ -46,16 +46,19 @@ class Preview extends CI_Controller{
          $i++;
          $ext_user = thirdpartyuser::find_by_id ( $cmt->user_id ) ;
          if ( $ext_user ) {echo "<a href='".$ext_user->profileURL."'>".$ext_user->firstName."</a>" ;}
-          ?> wrote
+          ?> wrote on <?php echo date("d/m/Y", strtotime($cmt->time));?>
+           &nbsp;&nbsp;&nbsp;&nbsp;
+          <?php
+          if ( isset($_GET['f']) && $_GET['f'] == 1 )
+           { echo "&nbsp;&nbsp;&nbsp;<a href=\"".$url."admin/delete_comment/index?id=".$cmt->id."&photo_id=".$cmt->photo_id."\">Delete</a>";
+           }?>
+         <br />
          <br /><?php echo $cmt->body ; ?>
-         <br /><?php echo $cmt->time_ ;?>
-         <?php
-         if ( isset($_GET['f']) && $_GET['f'] == 1 )
-          { echo "&nbsp;&nbsp;&nbsp;<a href=\"".$url."admin/delete_comment/index?id=".$cmt->id."&photo_id=".$cmt->photo_id."\">Delete</a>";
-          }?>
-         <?php } ?><br /><br /><br />
+
+        <br /> <?php } ?><br /><br />
 
        <?php if ( !isset($_GET['f']) ){
+
             echo "<a href=\"http://localhost/photoGallery/index.php/photo/index/?id=".$id."&gallery_name=".$gallery_name."\" >See Full Image </a>";
         } ?>
           <br /><br />

@@ -8,7 +8,7 @@ class comment {
 	//public $author;
 	public $user_id ;
 	public $body;
-	public $time_;
+	public $time;
 
 	protected static $table_name = "comment" ;
 
@@ -112,14 +112,14 @@ class comment {
 		//$author = empty($arr['author']) ? "anonymous" : $arr['author'] ;
 		$user_id = $arr['user_id'] ;
 		$body = $arr['body'] ;
-		$time_ = strftime("%Y-%m-%d %H:%M:%S",time());
+		$time = strftime("%Y-%m-%d %H:%M:%S",time());
 		//echo $time_ ;
 		if ( empty($body) ){
 			return 0;
 		}
 
 		$sql = "INSERT INTO ".self::$table_name." VALUES ('".$id."', '".$photo_id."', '".$user_id."', '".$body."', '";
-		$sql .= $time_."')" ;
+		$sql .= $time."')" ;
 
 		$result = $database->query($sql) ;
 

@@ -8,6 +8,7 @@ class List_photos extends CI_Controller{
         $this->load->view('photo_gallery/admin_headers');
         $this->load->library('functions');
         $this->load->model('comment');
+        $this->load->model('users');
         $this->load->model('photograph');
         $this->load->model('pagination');
         $this->session->userdata('is_login') == NULL ? $this->functions->redirect_to (base_url()."admin/login/") : NULL ;

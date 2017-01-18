@@ -9,11 +9,14 @@ class Preview extends CI_Controller{
 
 
       $this->load->helper('url') ;
-      $provider = provider_not_connected( ) ;
-      //$service = is_logged_in ( $provider ) ;
-      //$user_profile = $service->getUserProfile( ) ;
-      $user_id = Hybrid_Auth::getUserId( $provider ) ;
-      //echo "user id is brand new and it's: ".$user_id ;
+
+      if ( !isset($_GET['f']) ){
+          $provider = provider_not_connected( ) ;
+          //$service = is_logged_in ( $provider ) ;
+          //$user_profile = $service->getUserProfile( ) ;
+          $user_id = Hybrid_Auth::getUserId( $provider ) ;
+          //echo "user id is brand new and it's: ".$user_id ;
+        }
       $this->load->view('photo_gallery/model_window_header');
       //echo ( $_GET['id'] ) ;
       $this->load->model('photograph');
@@ -63,7 +66,7 @@ class Preview extends CI_Controller{
         } ?>
           <br /><br />
           <div id="pr"></div>
-
+          <?php if ( !isset($_GET['f']) ){ ?> 
           <form  method="post" id="comm_form">
               <h3>New Comment </h3>
               <table cellspacing="4" cellpadding="0">
@@ -73,6 +76,8 @@ class Preview extends CI_Controller{
               <input type="hidden" id="user_id" value="<?php echo $user_id ; ?>" />
               <button class="comm_button" align="center" style="border-radius:4em; ">Post Comment</button>
           </form>
+
+          <?php }?>
       </div>
 
     </div>

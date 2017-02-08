@@ -1,6 +1,6 @@
 
 $(document).ready(function( ){
-
+  //alert("fgfg") ;
   function neueFade() {
 
     if ( typeof neueFade.counter == 'undefined' ) {

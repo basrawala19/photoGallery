@@ -81,7 +81,8 @@
 		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 	</div> -->
 	<?php
-		redirect( "http://localhost/CodeIgniter_2.2.0/index.php/gallery_index/index/" ) ;
+		$this->load->view('photo_gallery/landingPage.html') ;
+		//redirect( "http://localhost/photoGallery/index.php/gallery_index/index/" ) ;
 	?>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>

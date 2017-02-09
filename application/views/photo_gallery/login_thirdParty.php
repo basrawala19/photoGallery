@@ -12,9 +12,9 @@ Welcome &nbsp;&nbsp;&nbsp;
 
 <div align="center" style="padding-top:15em;" >
 
-  <a href="http://localhost/photoGallery/index.php/hauth/login/Google"> <img class="logo" src="../../../Logo/Google.jpg" ></a>
+  <a href="http://localhost/photoGallery/index.php/hauth/login/Facebook"> <img class="logo" src="../../../Logo/Google.jpg" ></a>
   <br /><br /><br />
-  <a href="http://localhost/photoGallery/index.php/hauth/login/Facebook"> <img class="logo" src="../../../Logo/Facebook.png" ></a>
+  <a href="http://localhost/photoGallery/index.php/hauth/login/Google"> <img class="logo" src="../../../Logo/Facebook.png" ></a>
 
 </div>
 

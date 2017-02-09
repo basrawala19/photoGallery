@@ -1,10 +1,11 @@
+//alert("{}") ;
 $(document).ready(function(){
 
-    //alert("fs");
+    alert("fs");
 
     $('a#status1').on("click", function (e) {
 
-        //alert("sdf");
+        alert("sdf");
         e.preventDefault();
             $.fancybox({
                 // fancybox API options

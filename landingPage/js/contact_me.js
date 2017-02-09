@@ -1,7 +1,7 @@
 // Contact Form Scripts
 
 $(function() {
-
+  //alert("gf00") ;
     $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
@@ -19,8 +19,10 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
+            alert ( email ) ; 
+
             $.ajax({
-                url: "././mail/contact_me.php",
+                url: "http://localhost/photoGallery/landingPage/mail/contact_me.php",
                 type: "POST",
                 data: {
                     name: name,

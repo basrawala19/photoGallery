@@ -4,7 +4,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>PHOTO GALLERY PUBLIC</title>
 <link rel="stylesheet" href="../../../CSS/style.css"  />
-
+<!-- Bootstrap Core CSS -->
+<link href="http://172.16.101.168/photoGallery/landingPage/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Core JavaScript -->
+<script src="http://172.16.101.168/photoGallery/landingPage/vendor/bootstrap/js/bootstrap.min.js"></script>
 <!-- Add jQuery library -->
 <script type="text/javascript" src="../../../jquery.js"></script>
 
@@ -36,6 +39,7 @@
 <h1>PHOTO GALLERY PUBLIC</h1>
 
 </div>
+
 <div id="l_inline" align="center" style="display:none" >
     <h2>Login</h2>
     <div id="lpr"></div>

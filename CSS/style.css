@@ -50,7 +50,7 @@ img.preview{
 
 }
 
-body{
+body.unresponsive{
 	font-size:14px;
 	font-family:Verdana, Arial, Helvetica, sans-serif;
 	line-height:15px;
@@ -131,12 +131,20 @@ li{
 }
 
 #comment {
-	padding:4em 4em ;
+	#padding:4em 4em ;
 	font-family:"Courier New", Courier, monospace;
-	#background-image: url("http://localhost/CodeIgniter_2.2.0/brown.jpg");
+	background: url(../landingPage/img/tower.jpg) ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  width: 100%;
 	#background-color: 		#CD853F;
-	color:	#FFF8DC;
-	font-size: 18;
+	color:	white;
+	font-size: 20px;
 	font-weight:500;
 
 
@@ -167,16 +175,30 @@ li{
 
 }
 
-table.login td,th {
-  	color:#DEB887;
-}
+/*table.login td,th {
+  	#color:#DEB887;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(141, 13, 13);
+}*/
 
 table th{
 	color:#DEB887;
-}
-table td{
 
-  color:#FAEBD7;
+}
+table.pop_up td input{
+
+
+  color:black;
+  font-size: 1.0em;
+  font-weight: normal;;
+}
+
+table.pop_up td {
+
+    font-size: 1.0em;
+    font-weight: bold;
+    color: rgb(141, 13, 13);
 }
 
 #message{

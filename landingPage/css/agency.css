@@ -6,6 +6,7 @@
 body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  #font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 .text-muted {
   color: #777777;
@@ -43,9 +44,16 @@ h4,
 h5,
 h6 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+  #text-transform: uppercase;
   font-weight: 700;
 
+}
+
+h2.gallery-name, h3.photo-caption{
+
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+    color: #fed136;
+    font-size: 2em;
 }
 .img-centered {
   margin: 0 auto;
@@ -182,6 +190,7 @@ fieldset[disabled] .btn-xl.active {
   font-weight: 400;
   letter-spacing: 1px;
   color: white;
+  #color: #fed136;
 }
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
@@ -238,7 +247,8 @@ header.landingPage{
   text-align: center;
   color: white;
 }
-header.login{
+div.login{
+
   background-image: url('../img/desktop.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -251,10 +261,31 @@ header.login{
   color: white;
 }
 
+body.photo{
+  background-color: #222222;
+  background-image: url('../img/map-image.png');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  color: white;
+  padding-bottom: 0px;
+}
+
+header .intro-text-photo {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
 header .intro-text {
   padding-top: 100px;
   padding-bottom: 50px;
 }
+
 header .intro-text .intro-lead-in {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
@@ -273,13 +304,15 @@ header .intro-text .intro-heading {
   margin-bottom: 25px;
 }
 @media (min-width: 768px) {
+
+  header .intro-text-photo {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
   header .intro-text {
     padding-top: 300px;
     padding-bottom: 200px;
   }
-
-
-
   header .intro-text .intro-lead-in {
     font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;

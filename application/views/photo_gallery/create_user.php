@@ -4,7 +4,7 @@
         <h2>Create User</h2>
         <div id="c_pr"></div>
         <form action="#" method="post" id="c_form">
-            <table cellspacing="5" cellpadding="0">
+            <table class="pop_up" cellspacing="5" cellpadding="0">
                 <tr><td >Username : </td><td><input type="text" id="c_username"  /></td></tr>
                 <tr><td>Password : </td><td><input type="password" id="c_password" /></td></tr>
                 <tr><td >First Name : </td><td><input type="text" id="c_first_name" /></td></tr>

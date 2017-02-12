@@ -19,11 +19,11 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		//$this->load->helper('url') ;
+		$this->load->helper('url') ;
 		//$this->load->view('photo_gallery/grayScale') ;
-
+		$this->load->view('photo_gallery/headers.php');
 		$this->load->view('photo_gallery/landingPage');
-		
+
 	}
 }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -9,22 +9,22 @@
   <meta name="author" content="">
 
   <title>Images Plogger</title>
-
+  <link rel="stylesheet" href="../../../CSS/style.css"  />
   <script src="http://localhost/photoGallery/landingPage/vendor/jquery/jquery.min.js"></script>
   <script src="http://localhost/photoGallery/landingPage/vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="http://localhost/photoGallery/landingPage/js/agency.min.js"></script>
 
-  <!-- Add jQuery library -->
+  <!-- Add jQuery library >
   <script type="text/javascript" src="../../../jquery.js"></script>
 
-  <!-- Add mousewheel plugin (this is optional) -->
+  <!-- Add mousewheel plugin (this is optional) >
   <script type="text/javascript" src="../../../fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
 
-  <!-- Add fancyBox -->
+  <!-- Add fancyBox >
   <link rel="stylesheet" href="../../../fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
   <script type="text/javascript" src="../../../fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-  <!-- Optionally add helpers - button, thumbnail and/or media -->
+  <!-- Optionally add helpers - button, thumbnail and/or media >
   <link rel="stylesheet" href="../../../fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
   <script type="text/javascript" src="../../../fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
   <script type="text/javascript" src="../../../fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
@@ -37,35 +37,34 @@
   <script src="../../../js/jquery.jscroll.js" ></script>
 
 
-  <!-- Bootstrap Core CSS -->
+  <!-- Bootstrap Core CSS >
   <link href="http://localhost/photoGallery/landingPage/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom Fonts -->
+  <!-- Custom Fonts >
   <link href="http://localhost/photoGallery/landingPage/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-  <!-- Theme CSS -->
+  <!-- Theme CSS >
   <link href="http://localhost/photoGallery/landingPage/css/agency.css" rel="stylesheet">
   <link href="http://localhost/photoGallery/landingPage/vendor/bootstrap/css/bootstrap-social.css" rel="stylesheet">
 
-</head>
-
-<body id="page-top" class="index">
-
+</head-->
+<body id="page-top" class="index" style="padding-bottom:0px">
+<div class="login">
   <div id="l_inline" align="center" style="display:none" >
       <h2>Login</h2>
       <div id="lpr"></div>
       <form  method="post" id="l_form">
-          <table cellspacing="5" cellpadding="0" class="login">
+          <table class="pop_up" cellspacing="15" cellpadding="5">
               <tr><td>Username : </td><td><input type="text" id="l_username" /></td></tr>
               <tr><td>Password : </td><td><input type="password" id="l_password" /></td></tr>
 
           </table>
           <br />
-            <button class="l_button" align="center" style="border-radius:4em; ">Submit</button>
+            <button class="l_button btn btn-danger" align="center" style="border-radius:4em; ">Submit</button>
       </form>
 
   </div>
@@ -105,7 +104,7 @@
     </nav>
 
     <!-- Header -->
-    <header class="login">
+    <header>
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in"> Login </div>
@@ -145,6 +144,6 @@
           </div>
       </div>
   </footer>
-
+</div>
   </body>
 </html>

@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   $('span').on("click", function (e) {
-      //alert("sdf");
+      alert("sdf");
       if ( this.className != 'c_user' && this.className != 'e_user' ){
           return ;
       }
@@ -21,9 +21,9 @@ $(document).ready(function(){
               // fancybox API options
               'href':url,
               width: 500,
-              height: 300,
+              height: 250,
               autoSize: false,
-              fitToView: false,
+              fitToView: true,
               openEffect: 'elastic',
               closeEffect: 'elastic'
           }); // fancybox
@@ -32,7 +32,7 @@ $(document).ready(function(){
 
 
 
-  $('button').on('click',function(e){
+  $('button.e_button, button.c_button').on('click',function(e){
       if ( this.className == "c_button" ){
         $("#c_form").submit(function() { return false; });
         var unlen = $('#c_username').val();

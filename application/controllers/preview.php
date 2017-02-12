@@ -59,7 +59,7 @@ class Preview extends CI_Controller{
 
        <?php if ( !isset($_GET['f']) ){
 
-            echo "<a href=\"http://localhost/photoGallery/index.php/photo/index/?id=".$id."&gallery_name=".$gallery_name."\" >See Full Image </a>";
+            echo "<a href=\"http://localhost/photoGallery/index.php/photo_responsive/index/?id=".$id."&gallery_name=".$gallery_name."\" >See Full Image </a>";
         } ?>
           <br /><br />
           <div id="pr"></div>

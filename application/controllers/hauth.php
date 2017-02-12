@@ -7,7 +7,7 @@ class Hauth extends CI_Controller {
 
 		$this->load->helper('url');
 		provider_connected( ) ;
-		//$this->load->view ('photo_gallery/headers.php') ;
+		$this->load->view ('photo_gallery/headers.php') ;
 		//$this->load->view('photo_gallery/login_thirdParty.php');
 		$this->load->view('photo_gallery/login_responsive') ;
 		//$this->load->view ('photo_gallery/footers.php') ;

@@ -1,11 +1,11 @@
 //alert("{}") ;
 $(document).ready(function(){
 
-    alert("fs");
+    //alert("fs");
 
     $('a#status1').on("click", function (e) {
 
-        alert("sdf");
+        //alert("sdf");
         e.preventDefault();
             $.fancybox({
                 // fancybox API options
@@ -13,7 +13,7 @@ $(document).ready(function(){
                 width: 450,
                 height: 200,
                 autoSize: false,
-                fitToView: false,
+                fitToView: true,
                 openEffect: 'elastic',
                 closeEffect: 'elastic'
             }); // fancybox
@@ -49,7 +49,7 @@ $(document).ready(function(){
           //alert(img.width());
     });
 
-    $('button').on('click',function(e){
+    $('button.l_button').on('click',function(e){
 
           $("#l_form").submit(function() { return false; });
 

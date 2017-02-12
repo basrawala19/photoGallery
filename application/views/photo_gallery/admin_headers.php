@@ -3,6 +3,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>PHOTO GALLERY ADMIN</title>
 <link rel="stylesheet" href="../../../CSS/style.css"  />
+
+
 <!-- Add jQuery library -->
 <script type="text/javascript" src="../../../jquery.js"></script>
 
@@ -29,7 +31,7 @@
 
 </head>
 
-<body>
+<body class="unresponsive">
 
 <div id="header">
 <h1>PHOTO GALLERY ADMIN</h1>

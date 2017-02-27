@@ -22,7 +22,19 @@ class Welcome extends CI_Controller {
 		$this->load->helper('url') ;
 		//$this->load->view('photo_gallery/grayScale') ;
 		$this->load->view('photo_gallery/headers.php');
-		$this->load->view('photo_gallery/landingPage');
+
+		$this->load->helper('url') ;
+		$provider = provider_not_connected( 1 ) ;
+		$data = array( ) ;
+		if ( $provider != null )
+		{
+			$service = is_logged_in ( $provider ) ;
+			$user_profile = $service->getUserProfile( ) ;
+			$data['user_profile'] = $user_profile ;
+		}
+
+
+		$this->load->view('photo_gallery/landingPage',$data);
 
 	}
 }

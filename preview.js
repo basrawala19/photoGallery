@@ -1,6 +1,9 @@
 
 $(document).ready(function( ){
   //alert("fgfg") ;
+
+
+
   function neueFade() {
 
     if ( typeof neueFade.counter == 'undefined' ) {
@@ -48,17 +51,20 @@ $(document).ready(function( ){
       callback: neueFade
   });
   $(document).on('click', 'img.p', function(e) {
-        //alert("hatim");
+        //alert("hatimakk");
         e.preventDefault(); // avoids calling success.php from the link
         var id = this.id;
         var gallery_name = document.getElementById('gallery_name').value ;
+        alert(gallery_name);
+        alert('http://localhost/photoGallery/index.php/photo_responsive/index/?id='+id+'&gallery_name='+gallery_name) ;
+
         //alert(gallery_name);
         //alert(id);
         //$.fancybox.showActivity();
         $.ajax({
             type: "POST",
             cache: false,
-            url: 'http://localhost/photoGallery/index.php/preview/index/?id='+id+'&gallery_name='+gallery_name, // success.php
+            url: 'http://localhost/photoGallery/index.php/photo_responsive/index/?id='+id+'&gallery_name='+gallery_name, // success.php
             success: function (data) {
             // on success, post returned data in fancybox
             $.fancybox(data, {
@@ -66,7 +72,7 @@ $(document).ready(function( ){
                 width: 900,
                 height: 700,
                 autoSize: false,
-                fitToView: false,
+                fitToView: true,
                 openEffect: 'elastic',
                 closeEffect: 'elastic'
             }); // fancybox
@@ -75,6 +81,7 @@ $(document).ready(function( ){
     }); // on
 
 
+  
     $(document).on('click', 'img.photos', function(e) {
             //alert("hatim");
             e.preventDefault(); // avoids calling success.php from the link
@@ -92,7 +99,7 @@ $(document).ready(function( ){
                     width: 900,
                     height: 700,
                     autoSize: false,
-                    fitToView: false,
+                    fitToView: true,
                     openEffect: 'elastic',
                     closeEffect: 'elastic'
                 }); // fancybox

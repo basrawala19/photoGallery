@@ -372,13 +372,23 @@ function is_logged_in ( $providerId ) {
 
 }
 
-function provider_not_connected( ) {
+function check_login ( ) {
+
+
+
+}
+
+function provider_not_connected( $i = 0 ) {
 
 	$CI =& get_instance();
 	$CI->load->library('HybridAuthLib');
 	//$provider = $CI->hybridauthlib->getProvider( ) ;
 	$providers = $CI->hybridauthlib->getConnectedProviders( ) ;
 	if ( empty($providers) ){
+
+		 if ( $i == 1 ){
+			 return null ;
+		 }
 		 header ("Location: ".base_url( )."hauth/index/") ;
 		 exit ;
 	}

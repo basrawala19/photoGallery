@@ -18,11 +18,11 @@
 <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 <link href="http://localhost/photoGallery/landingPage/css/agency.css" rel="stylesheet">
-<link href="http://localhost/photoGallery/landingPage/css/agency.css" rel="stylesheet">
 <link href="http://localhost/photoGallery/landingPage/vendor/bootstrap/css/bootstrap-social.css" rel="stylesheet">
 <script src="http://localhost/photoGallery/landingPage/vendor/jquery/jquery.min.js"></script>
 <script src="http://localhost/photoGallery/landingPage/vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+<script src="http://localhost/photoGallery/landingPage/js/agency.min.js"></script>
 
 <script type="text/javascript" src="../../../jquery.js"></script>
 
@@ -44,11 +44,7 @@
 <script type="text/javascript" src="../../../login.js"></script>
 <script src="../../../js/jquery.jscroll.min.js"></script>
 <script src="../../../js/jquery.jscroll.js" ></script>
-<!--script src="http://localhost/photoGallery/landingPage/js/agency.min.js"></script-->
-<!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
-<![endif]-->
+
 </head>
 
 <!--body class="unresponsive">

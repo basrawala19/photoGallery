@@ -42,7 +42,7 @@ class Gallery_index extends CI_Controller{
                         <td align="center"><a href=""><span class="gal"><?php echo $gallery->name; ?> </span></a></td>
                         <td align="center"><?php echo gallery::count_images($gallery->name); ?> </td>
                         <td align="center"><?php echo gallery::count_comments($gallery->name); ?> </td>
-                        <td align="center"><a href="<?php echo $url."index_page/index/?gallery_name=".$gallery->name ?>">Click Here </a></td>
+                        <td align="center"><a href="<?php echo $url."index_page_responsive/index/?gallery_name=".$gallery->name ?>">Click Here </a></td>
                       </tr>
                 <?php  endforeach;
                 ?>

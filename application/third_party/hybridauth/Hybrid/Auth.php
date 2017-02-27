@@ -81,8 +81,8 @@ class Hybrid_Auth
 
 		require_once $config["path_base"] . "User.php";
 		require_once $config["path_base"] . "User_Profile.php";
-		require_once $config["path_base"] . "User_Contact.php";
-		require_once $config["path_base"] . "User_Activity.php";
+		//require_once $config["path_base"] . "User_Contact.php";
+		//require_once $config["path_base"] . "User_Activity.php";
 
 		// hash given config
 		Hybrid_Auth::$config = $config;

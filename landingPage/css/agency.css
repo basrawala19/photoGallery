@@ -208,8 +208,9 @@ fieldset[disabled] .btn-xl.active {
   background-color: #fec503;
 }
 @media (min-width: 768px) {
-  .navbar-custom {
+  .navbar-custom{
     background-color: transparent;
+    #background-color: black;
     padding: 25px 0;
     -webkit-transition: padding 0.3s;
     -moz-transition: padding 0.3s;
@@ -229,12 +230,23 @@ fieldset[disabled] .btn-xl.active {
 @media (min-width: 768px) {
   .navbar-custom.affix {
     background-color: #222222;
+    #background-color: red;
     padding: 10px 0;
   }
   .navbar-custom.affix .navbar-brand {
     font-size: 1.5em;
   }
 }
+
+header.indexPage{
+
+
+  padding-top: 70px;
+  background-color: black;
+  color: red;
+
+}
+
 header.landingPage{
   background-image: url('../img/header-bg.jpg');
   background-repeat: no-repeat;
@@ -262,8 +274,10 @@ div.login{
 }
 
 body.photo{
-  background-color: #222222;
-  background-image: url('../img/map-image.png');
+  #background-color: #222222;
+  background-color:black;
+  #background-image: url('../img/map-image.png');
+  #background-image: url('../img/BG/N3.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -279,6 +293,7 @@ body.photo{
 header .intro-text-photo {
   padding-top: 100px;
   padding-bottom: 50px;
+  #background-image: url('../img/map-image.png');
 }
 
 header .intro-text {
@@ -294,6 +309,10 @@ header .intro-text .intro-lead-in {
   margin-bottom: 25px;
 }
 
+header .caption {
+  padding-top: 30px;
+  #visibility: hidden;
+}
 
 header .intro-text .intro-heading {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -303,7 +322,28 @@ header .intro-text .intro-heading {
   line-height: 50px;
   margin-bottom: 25px;
 }
+
+@media (min-width: 321px) {
+
+  img.photo-responsive {
+
+    height: 300px;
+    width: 400px;
+  }
+}
+
 @media (min-width: 768px) {
+
+  img.photo-responsive {
+
+    height: 500px;
+    width: 600px;
+  }
+
+  header .caption {
+    padding-top: 50px;
+    visibility: visible;
+  }
 
   header .intro-text-photo {
     padding-top: 100px;
@@ -375,10 +415,41 @@ section h3.section-subheading {
     padding: 150px 0;
   }
 }
+
+#comment {
+	#padding:4em 4em ;
+	font-family:"Courier New", Courier, monospace;
+	background: url(../img/tower.jpg) ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  width: 100%;
+	#background-color: 		#CD853F;
+	color:	white;
+	font-size: 20px;
+	font-weight:500;
+
+
+}
+
 .service-heading {
   margin: 15px 0;
   text-transform: none;
 }
+
+
+img.portfolio-img {
+
+  height: 289px;
+  width: 400px;
+
+}
+
+
 #portfolio .portfolio-item {
   margin: 0 0 15px;
   right: 0;
@@ -420,6 +491,7 @@ section h3.section-subheading {
   margin: 0;
 }
 #portfolio .portfolio-item .portfolio-caption {
+
   max-width: 400px;
   margin: 0 auto;
   background-color: white;

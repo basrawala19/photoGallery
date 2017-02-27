@@ -12,7 +12,7 @@ class Photo_responsive extends CI_Controller{
         $user_profile = $service->getUserProfile( ) ;
         $user_profile->id = Hybrid_Auth::getUserId( $provider ) ;
 
-        $this->load->view('photo_gallery/headers');
+        //$this->load->view('photo_gallery/headers');
         $this->load->library('functions') ;
         $this->load->model('photograph') ;
         $this->load->model('comment');
@@ -57,21 +57,19 @@ class Photo_responsive extends CI_Controller{
 
             <title>Agency - Start Bootstrap Theme</title>
 
-            <!-- Bootstrap Core CSS -->
+
             <link href="http://localhost/photoGallery/landingPage/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-            <!-- Custom Fonts -->
+
             <link href="http://localhost/photoGallery/landingPage/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
             <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
             <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
             <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
             <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-            <!-- Theme CSS -->
+
             <link href="http://localhost/photoGallery/landingPage/css/agency.css" rel="stylesheet">
 
-            <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
             <!--[if lt IE 9]>
                 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
                 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
@@ -99,7 +97,7 @@ class Photo_responsive extends CI_Controller{
                             </li>
 
                             <li>
-                              <a class="page-scroll" href="<?php echo $url."index_page/index/?gallery_name=".$_GET['gallery_name']; ?>" >&laquo; Back</a>
+                              <a class="page-scroll" href="<?php echo $url."index_page/index/?gallery_name=".$_GET['gallery_name']; ?>" >&laquo; Gallery</a>
 
                             </li>
                             <li>
@@ -119,18 +117,25 @@ class Photo_responsive extends CI_Controller{
             </nav>
 
             <!-- Header -->
-            <header >
+            <header>
+              <div class="intro-text-photo">
                 <div class="container">
-                    <div class="intro-text-photo">
+                    <div class="row">
+
                         <!--div class="intro-lead-in">Welcome To Our Studio!</div>
                         <div class="intro-heading">It's Nice To Meet You</div>
                         <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a-->
+                        <!--h2 class="gallery-name"><?php echo "Photo By : ".$gallery ; ?></h2-->
+
+                        <div class="col-md-8 col-sm-8">
+                          <img class="img-responsive center-block photo-responsive" src="<?php echo "http://localhost/photoGallery/".$photo->image_path();?>">
+                      </div>
+                      <div class="col-md-4 col-sm-4 caption">
                         <h2 class="gallery-name"><?php echo "Photo By : ".$gallery ; ?></h2>
-
-
-                        <img class="img-responsive center-block" src="<?php echo "http://localhost/photoGallery/".$photo->image_path();?>" height="500" width="600"/>
-
+                        A beautiful photograph taken at rain forest on may 2013.
+                      </div>
                     </div>
+                      </div>
                 </div>
             </header>
 
@@ -197,26 +202,24 @@ class Photo_responsive extends CI_Controller{
 
 
 
-            <!-- jQuery -->
-            <script src="http://localhost/photoGallery/landingPage/vendor/jquery/jquery.min.js"></script>
+                        <!-- jQuery -->
+                        <script src="http://localhost/photoGallery/landingPage/vendor/jquery/jquery.min.js"></script>
 
-            <!-- Bootstrap Core JavaScript -->
-            <script src="http://localhost/photoGallery/landingPage/vendor/bootstrap/js/bootstrap.min.js"></script>
+                        <!-- Bootstrap Core JavaScript -->
+                        <script src="http://localhost/photoGallery/landingPage/vendor/bootstrap/js/bootstrap.min.js"></script>
 
-            <!-- Plugin JavaScript -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+                        <!-- Plugin JavaScript -->
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
 
-            <!-- Contact Form JavaScript -->
-            <script src="http://localhost/photoGallery/landingPage/js/jqBootstrapValidation.js"></script>
-            <script src="http://localhost/photoGallery/landingPage/js/contact_me.js"></script>
+                        <!-- Contact Form JavaScript -->
+                        <script src="http://localhost/photoGallery/landingPage/js/jqBootstrapValidation.js"></script>
+                        <script src="http://localhost/photoGallery/landingPage/js/contact_me.js"></script>
 
-            <!-- Theme JavaScript -->
-            <script src="http://localhost/photoGallery/landingPage/js/agency.min.js"></script>
+                        <!-- Theme JavaScript -->
+                        <script src="http://localhost/photoGallery/landingPage/js/agency.min.js"></script>
 
         </body>
 
         </html>
-
-
 
 <?php }} ?>

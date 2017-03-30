@@ -1,7 +1,8 @@
 
 
 <body id="page-top" class="index">
-
+    <script src="<?php echo $project_url ; ?>landingPage/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--script src="<?php echo $project_url ; ?>landingPage/js/agency.min.js"></script-->
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container">
@@ -37,7 +38,7 @@
                     <li>
 
                       <?php if ( !isset( $user_profile) ) { ?>
-                        <a class="page-scroll" href="http://localhost/photoGallery/index.php/hauth/index/">Sign In</a>
+                        <a class="page-scroll" href="<?php echo $url ; ?>hauth/index/">Sign In</a>
                       <?php }else{
                         echo "<a href='" .$user_profile->profileURL."'>". $user_profile->firstName ."</a>" ;
                       } ?>
@@ -55,14 +56,42 @@
             <div class="intro-text">
                 <div class="intro-lead-in">Welcome To Our Studio!</div>
                 <div class="intro-heading">It's Nice To Have You</div>
-                <a href="http://localhost/photoGallery/index.php/gallery_index/index/" class="page-scroll btn btn-xl">Explore Galleries</a>
+                <a href="<?php echo $url ; ?>gallery_index_responsive/index/" class="page-scroll btn btn-xl">Explore Galleries</a>
             </div>
         </div>
     </header>
 
     <!-- Portfolio Grid Section -->
+
     <section id="portfolio" class="bg-light-gray">
-        <div class="container">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h2 class="section-heading">Amazing Galleries</h2>
+                  <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+              </div>
+          </div>
+
+          <?php $galleries = gallery::get_all_galleries( ) ;
+          foreach ($galleries as $gallery ) : ?>
+
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                  <a class="portfolio-link"  href="<?php echo $url."index_page_responsive/index/?gallery_name=".$gallery->name ?>" ><img class="img-responsive portfolio-img"  src="<?php echo $project_url ; ?><?php echo $gallery->image_path()?>"></a>
+
+                  <div class="portfolio-caption">
+                      <h4><?php echo $gallery->name; ?></h4>
+                      <p class="text-muted">Graphic Design</p>
+                  </div>
+
+              </div>
+          <?php endforeach ; ?>
+
+
+
+
+            </div>
+
+        <!--div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Trending Galleries</h2>
@@ -72,12 +101,12 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <!--div class="portfolio-hover">
+                        <!div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
-                        </div-->
-                        <img src="http://localhost/photoGallery/landingPage/img/portfolio/roundicons.png" class="img-responsive" alt="">
+                        </div>
+                        <img src="<?php echo $project_url ; ?>landingPage/img/portfolio/roundicons.png" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Round Icons</h4>
@@ -87,7 +116,7 @@
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
 
-                        <img src="http://localhost/photoGallery/landingPage/img/portfolio/startup-framework.png" class="img-responsive" alt="">
+                        <img src="<?php echo $project_url ; ?>landingPage/img/portfolio/startup-framework.png" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Startup Framework</h4>
@@ -97,7 +126,7 @@
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
 
-                        <img src="http://localhost/photoGallery/landingPage/img/portfolio/treehouse.png" class="img-responsive" alt="">
+                        <img src="<?php echo $project_url ; ?>landingPage/img/portfolio/treehouse.png" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Treehouse</h4>
@@ -107,7 +136,7 @@
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
 
-                        <img src="http://localhost/photoGallery/landingPage/img/portfolio/golden.png" class="img-responsive" alt="">
+                        <img src="<?php echo $project_url ; ?>landingPage/img/portfolio/golden.png" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Golden</h4>
@@ -117,7 +146,7 @@
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
 
-                        <img src="http://localhost/photoGallery/landingPage/img/portfolio/escape.png" class="img-responsive" alt="">
+                        <img src="<?php echo $project_url ; ?>landingPage/img/portfolio/escape.png" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Escape</h4>
@@ -127,7 +156,7 @@
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
 
-                        <img src="http://localhost/photoGallery/landingPage/img/portfolio/dreams.png" class="img-responsive" alt="">
+                        <img src="<?php echo $project_url ; ?>landingPage/img/portfolio/dreams.png" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Dreams</h4>
@@ -135,7 +164,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div-->
     </section>
 
 
@@ -153,7 +182,7 @@
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="http://localhost/photoGallery/landingPage/img/about/1.jpg" alt="">
+                                <img class="img-circle img-responsive" src="<?php echo $project_url ; ?>landingPage/img/about/1.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -167,7 +196,7 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="http://localhost/photoGallery/landingPage/img/about/2.jpg" alt="">
+                                <img class="img-circle img-responsive" src="<?php echo $project_url ; ?>landingPage/img/about/2.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -181,7 +210,7 @@
                         </li>
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="http://localhost/photoGallery/landingPage/img/about/3.jpg" alt="">
+                                <img class="img-circle img-responsive" src="<?php echo $project_url ; ?>landingPage/img/about/3.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -195,7 +224,7 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="http://localhost/photoGallery/landingPage/img/about/4.jpg" alt="">
+                                <img class="img-circle img-responsive" src="<?php echo $project_url ; ?>landingPage/img/about/4.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -233,8 +262,8 @@
         </div>
     </section>
 
-    <div style="padding-top:150px;">
-    </div>
+    <!--div style="padding-top:150px;">
+    </div-->
 
     <section id="contact" class="container content-section text-center">
         <div class="row">
@@ -289,7 +318,7 @@
     </footer>
 
 
-    <script src="http://localhost/photoGallery/landingPage/js/agency.min.js"></script>
+    <script src="<?php echo $project_url ; ?>landingPage/js/agency.min.js"></script>
 
 
 </body>

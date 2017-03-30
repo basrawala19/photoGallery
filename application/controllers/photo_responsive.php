@@ -18,6 +18,7 @@ class Photo_responsive extends CI_Controller{
         $message = $this->session->userdata('message') ? $this->session->userdata('message') : "" ;
         $this->session->set_userdata('message',"");
         $url = base_url( ) ;
+        $project_url = project_url( ) ;
         $id = $_GET['id'] ;
 
         $photograph = new photograph( ) ;
@@ -33,6 +34,7 @@ class Photo_responsive extends CI_Controller{
         $data['url'] = $url ;
         $data['provider'] = $provider ;
         $data['body'] = $body ;
+        $data['project_url'] = $project_url ;
         $this->load->view('photo_gallery/photo_responsive',$data);
 
 

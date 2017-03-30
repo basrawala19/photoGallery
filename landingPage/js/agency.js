@@ -4,13 +4,10 @@ alert("gff" ) ;
     "use strict";
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
-        alert("hatim") ;
         var $anchor = $(this);
-        alert($($anchor.attr('href')).offset().top - 50);
         $('html,body').stop().animate({
             scrollTop: ($($anchor.attr('href')).offset().top - 50)
         }, 12500, 'easeInOutExpo');
-        //alert("hh") ;
         event.preventDefault();
     });
 

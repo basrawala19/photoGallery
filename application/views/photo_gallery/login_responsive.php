@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <!--html lang="en">
 
 <head>
@@ -53,6 +53,9 @@
 
 </head-->
 <body id="page-top" class="index" style="padding-bottom:0px">
+
+<!--script src="<?php echo $project_url ; ?>landingPage/vendor/bootstrap/js/bootstrap.min.js"></script-->
+
 <div class="login">
   <div id="l_inline" align="center" style="display:none" >
       <h2>Login</h2>
@@ -91,10 +94,10 @@
                         <a class="page-scroll" href="#services">Services</a>
                     </li-->
                     <li>
-                        <a class="page-scroll" href="http://localhost/photoGallery/index.php">Home</a>
+                        <a class="page-scroll" href="<?php echo $url ; ?>">Home</a>
                     </li>
-                    <li>
-                        <a id="status1" class="page-scroll" href="#">Admin Login</a>
+                    <li class="status1">
+                        <a  href="#" class="page-scroll">Admin Login</a>
                     </li>
                 </ul>
             </div>
@@ -109,8 +112,8 @@
             <div class="intro-text">
                 <div class="intro-lead-in"> Login </div>
 
-                <a href="http://localhost/photoGallery/index.php/hauth/login/Facebook" class="page-scroll btn btn-lg btn-social btn-facebook"><span class="fa fa-facebook"></span> Sign in with Facebook</a>
-                <a href="http://localhost/photoGallery/index.php/hauth/login/Google" class="page-scroll btn btn-lg btn-social btn-google"><i class="fa fa-google"></i> Sign in with Google</a>
+                <a href="<?php echo $url ; ?>hauth/login/Facebook" class="page-scroll btn btn-lg btn-social btn-facebook"><span class="fa fa-facebook"></span> Sign in with Facebook</a>
+                <a href="<?php echo $url ; ?>hauth/login/Google" class="page-scroll btn btn-lg btn-social btn-google"><i class="fa fa-google"></i> Sign in with Google</a>
 
             </div>
         </div>
@@ -144,6 +147,9 @@
           </div>
       </div>
   </footer>
+
+  <!--script src="<?php echo $project_url ; ?>landingPage/js/agency.min.js"></script-->
+
 </div>
   </body>
 </html>

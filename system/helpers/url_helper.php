@@ -127,6 +127,21 @@ if ( ! function_exists('index_page'))
 
 // ------------------------------------------------------------------------
 
+
+/////
+
+if ( ! function_exists('project_url'))
+{
+	function project_url()
+	{
+		$CI =& get_instance();
+		return $CI->config->item('project_url');
+	}
+}
+
+
+
+////
 /**
  * Anchor Link
  *
@@ -405,7 +420,7 @@ function provider_not_connected( $i = 0 ) {
 		$CI->load->library('HybridAuthLib');
 		//$provider = $CI->hybridauthlib->getProvider( ) ;
 		if ( !empty($CI->hybridauthlib->getConnectedProviders( )) ){
-			header ("Location: ".base_url( )."gallery_index/index/") ;
+			header ("Location: ".base_url( )."gallery_index_responsive/index/") ;
 		 	exit ;
 		}
 		}

@@ -9,7 +9,10 @@ class Hauth extends CI_Controller {
 		provider_connected( ) ;
 		$this->load->view ('photo_gallery/headers.php') ;
 		//$this->load->view('photo_gallery/login_thirdParty.php');
-		$this->load->view('photo_gallery/login_responsive') ;
+		$url = base_url ( ) ;
+		$data['url'] = $url ;
+		$data['project_url'] = project_url( ) ;
+		$this->load->view('photo_gallery/login_responsive',$data) ;
 		//$this->load->view ('photo_gallery/footers.php') ;
 
 	}
@@ -58,7 +61,7 @@ class Hauth extends CI_Controller {
 					}
 					log_message('info', 'controllers.HAuth.login: user profile:'.PHP_EOL.print_r($user_profile, TRUE));
 
-					header ("Location: ".base_url( )."gallery_index/index/") ;
+					header ("Location: ".base_url( )."gallery_index_responsive/index/") ;
 					exit ;
 
 				}

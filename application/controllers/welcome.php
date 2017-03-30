@@ -21,10 +21,12 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->helper('url') ;
 		//$this->load->view('photo_gallery/grayScale') ;
+		$this->load->model('gallery');
 		$this->load->view('photo_gallery/headers.php');
 
 		$this->load->helper('url') ;
 		$provider = provider_not_connected( 1 ) ;
+
 		$data = array( ) ;
 		if ( $provider != null )
 		{
@@ -33,7 +35,8 @@ class Welcome extends CI_Controller {
 			$data['user_profile'] = $user_profile ;
 		}
 
-
+		$data['url'] = base_url( ) ;
+		$data['project_url'] = project_url( ) ;
 		$this->load->view('photo_gallery/landingPage',$data);
 
 	}

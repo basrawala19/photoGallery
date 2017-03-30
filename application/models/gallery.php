@@ -5,6 +5,13 @@
 
     public $id;
     public $name;
+    public $image_name ;
+
+    private static $item_per_page = 3 ;
+
+    protected static $dir = "images/gallery" ;
+
+    protected static $table_name = "gallery";
 
     public function get_instance_ ( $str ){
 
@@ -41,7 +48,31 @@
 
   	}
 
-      public static function get_all_galleries ( ) {
+    public function image_path ( ) {
+  	   //echo ($this->name) ;
+  		return self::$dir."/".$this->image_name;
+
+  	}
+
+    public static function get_galleries ($page_number) {
+
+
+        $database = self::get_instance_('databases') ;
+        $offset = (($page_number-1) * self::$item_per_page);
+
+        $result = $database->query("SELECT * FROM gallery LIMIT ".self::$item_per_page." OFFSET ".$offset) ;
+     		$object_array = array() ;
+     		while ( $record = mysqli_fetch_assoc($result) ){
+
+     				$object_array[] = self::instantiate($record) ;
+
+     		}
+     		return $object_array ;
+
+     	}
+
+
+    public static function get_all_galleries ( ) {
 
          $database = self::get_instance_('databases') ;
 

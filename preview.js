@@ -2,6 +2,15 @@
 $(document).ready(function( ){
   //alert("fgfg") ;
 
+  /*$('a.page-scroll').bind('click', function(event) {
+      var $anchor = $(this);
+      $('html,body').stop().animate({
+          scrollTop: ($($anchor.attr('href')).offset().top - 50)
+      }, 1250);
+      event.preventDefault();
+  });
+
+  $("html, body").animate({scrollTop: $("div.add-gallery").offset().top}, 8000);*/
 
 
   function neueFade() {
@@ -55,8 +64,8 @@ $(document).ready(function( ){
         e.preventDefault(); // avoids calling success.php from the link
         var id = this.id;
         var gallery_name = document.getElementById('gallery_name').value ;
-        alert(gallery_name);
-        alert('http://localhost/photoGallery/index.php/photo_responsive/index/?id='+id+'&gallery_name='+gallery_name) ;
+        //alert(gallery_name);
+        //alert('http://localhost/photoGallery/index.php/preview_responsive/index/?id='+id+'&gallery_name='+gallery_name) ;
 
         //alert(gallery_name);
         //alert(id);
@@ -64,14 +73,14 @@ $(document).ready(function( ){
         $.ajax({
             type: "POST",
             cache: false,
-            url: 'http://localhost/photoGallery/index.php/photo_responsive/index/?id='+id+'&gallery_name='+gallery_name, // success.php
+            url: 'http://localhost/photoGallery/index.php/preview_responsive/index/?id='+id+'&gallery_name='+gallery_name, // success.php
             success: function (data) {
             // on success, post returned data in fancybox
             $.fancybox(data, {
                 // fancybox API options
-                width: 900,
+                width: 700,
                 height: 700,
-                autoSize: false,
+                autoSize: true,
                 fitToView: true,
                 openEffect: 'elastic',
                 closeEffect: 'elastic'
@@ -81,7 +90,7 @@ $(document).ready(function( ){
     }); // on
 
 
-  
+
     $(document).on('click', 'img.photos', function(e) {
             //alert("hatim");
             e.preventDefault(); // avoids calling success.php from the link

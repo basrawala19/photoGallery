@@ -16,11 +16,13 @@
       $gallery_name = $_GET['gallery_name'] ;
       $photos = photograph::find_curr_page($pagination);
       $url = base_url( ) ;
+      $project_url = project_url( ) ;
 
 
       $this->load->view('photo_gallery/headers');
 
       $data = array( ) ;
+      $data['project_url'] = $project_url ;
       $data['gallery_name'] = $gallery_name ;
       $data['user_profile'] = $user_profile ;
       $data['pagination'] = $pagination ;

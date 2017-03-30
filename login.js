@@ -3,7 +3,7 @@ $(document).ready(function(){
 
     //alert("fs");
 
-    $('a#status1').on("click", function (e) {
+    $('li.status1').on("click", function (e) {
 
         //alert("sdf");
         e.preventDefault();
@@ -49,8 +49,12 @@ $(document).ready(function(){
           //alert(img.width());
     });
 
-    $('button.l_button').on('click',function(e){
+      $('button').on('click',function(e){
+        //alert("hatim") ;
+      });
 
+    $('button.l_button').on('click',function(e){
+        //alert("g") ;
           $("#l_form").submit(function() { return false; });
 
           var unlen = $('#l_username').val();

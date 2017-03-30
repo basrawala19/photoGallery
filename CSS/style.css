@@ -29,7 +29,7 @@ input:focus, textarea:focus {
 img{
 
 	border:0.5em;
-	border-style:dotted;
+	#border-style:dotted;
 	#border-radius:2em;
 	border-color:grey;
 }
@@ -62,7 +62,7 @@ body.unresponsive{
 
 
 
-a,span{
+a,span.c{
 	#color:#DEB887;
   color:#FAEBD7;
 	font-weight: lighter;;
@@ -183,7 +183,7 @@ li{
 }*/
 
 table th{
-	color:#DEB887;
+	#color:#DEB887;
 
 }
 table.pop_up td input{

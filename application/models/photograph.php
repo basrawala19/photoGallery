@@ -39,7 +39,8 @@ class photograph {
 	 	//global $pagination ;
 		//echo "SELECT * FROM ".self::$table_name." WHERE LIMIT ".$pagination->current_page." OFFSET ".$pagination->offset_() ;
                 //$pagination = self::get_instance_( 'pagination' ) ;
-		return self::find_by_sql("SELECT * FROM ".self::$table_name." WHERE gallery_name LIKE '".$pagination->gallery_name."' LIMIT ".$pagination->per_page." OFFSET ".$pagination->offset_());
+		//return self::find_by_sql("SELECT * FROM ".self::$table_name." WHERE gallery_name LIKE '".$pagination->gallery_name."' LIMIT ".$pagination->per_page." OFFSET ".$pagination->offset_());
+		return self::find_by_sql("SELECT * FROM ".self::$table_name." WHERE gallery_name LIKE '".$pagination->gallery_name."'") ;
 	}
 
 	public static function find_curr_page_admin ( $pagination ){

@@ -210,7 +210,7 @@ abstract class BaseFacebook
    *
    * @var boolean
    */
-  protected $trustForwarded = false;
+  protected $trustForwarded = true;
 
   /**
    * Initialize a Facebook Application.

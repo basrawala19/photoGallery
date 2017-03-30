@@ -273,7 +273,8 @@ div.login{
   color: white;
 }
 
-body.photo{
+
+.photo{
   #background-color: #222222;
   background-color:black;
   #background-image: url('../img/map-image.png');
@@ -288,6 +289,7 @@ body.photo{
   text-align: center;
   color: white;
   padding-bottom: 0px;
+  padding-right: 0px;
 }
 
 header .intro-text-photo {
@@ -323,6 +325,7 @@ header .intro-text .intro-heading {
   margin-bottom: 25px;
 }
 
+
 @media (min-width: 321px) {
 
   img.photo-responsive {
@@ -330,14 +333,36 @@ header .intro-text .intro-heading {
     height: 300px;
     width: 400px;
   }
+  img.photo-preview-responsive {
+
+    height: 180px;
+    width: 300px;
+  }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
 
   img.photo-responsive {
 
-    height: 500px;
-    width: 600px;
+    height: 350px;
+    width: 450px;
+  }
+
+  img.photo-preview-responsive {
+
+    height: 260px;
+    width: 380px;
+  }
+}
+
+
+
+@media (min-width: 768px) {
+
+  img.photo-responsive, img.photo-preview-responsive{
+
+    height: 400px;
+    width: 500px;
   }
 
   header .caption {
@@ -370,6 +395,17 @@ header .intro-text .intro-heading {
   }
 }
 
+@media (min-width: 830px) {
+
+  img.photo-responsive{
+
+    height: 450px;
+    width: 550px;
+  }
+
+}
+
+
 section#download {
   width: 100%;
   color: #fec503;
@@ -388,6 +424,7 @@ section#download {
 section {
 
   padding: 100px 0;
+
 }
 
 section h1.intro-lead-in{
@@ -413,6 +450,7 @@ section h3.section-subheading {
 @media (min-width: 768px) {
   section {
     padding: 150px 0;
+    
   }
 }
 
@@ -495,7 +533,7 @@ img.portfolio-img {
   max-width: 400px;
   margin: 0 auto;
   background-color: white;
-  text-align: center;
+  text-align: left;
   padding: 25px;
 }
 #portfolio .portfolio-item .portfolio-caption h4 {

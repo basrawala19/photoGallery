@@ -36,7 +36,7 @@ class Index_page extends CI_Controller{
             <?php foreach ($photos as $photo ) : ?>
 
 
-                    <a href="http://localhost/photoGallery/index.php/photo_responsive/index/?id=<?php echo $photo->id ; ?>&gallery_name=<?php echo $_GET['gallery_name']; ?>" ><span style="padding-left:6em;"  class="photos" id=<?php echo $photo->id; ?>><img class="p" id=<?php echo $photo->id; ?> src="http://localhost/photoGallery/<?php echo $photo->image_path()?>" width='400' height ='300' vspace="10" hspace="2"/></span></a>
+                    <a href="<?php echo $url ;?>photo_responsive/index/?id=<?php echo $photo->id ; ?>&gallery_name=<?php echo $_GET['gallery_name']; ?>" ><span style="padding-left:6em;"  class="photos" id=<?php echo $photo->id; ?>><img class="p" id=<?php echo $photo->id; ?> src="http://172.16.101.168/photoGallery/<?php echo $photo->image_path()?>" width='400' height ='300' vspace="10" hspace="2"/></span></a>
             <?php endforeach ; ?>
             </div>
               <div style="clear:both; padding:2em 4em;">

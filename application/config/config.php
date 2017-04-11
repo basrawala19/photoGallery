@@ -14,8 +14,8 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/photoGallery/index.php/';
-$config['project_url'] = 'http://localhost/photoGallery/' ;
+$config['base_url']	= 'http://localhost/photoGallery_new/index.php/';
+$config['project_url'] = 'http://localhost/photoGallery_new/' ;
 /*
 |--------------------------------------------------------------------------
 | Index File

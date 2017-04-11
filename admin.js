@@ -42,7 +42,7 @@ $(document).ready(function(){
         var pr = 'c_pr' ;
         var form = '#c_form';
         var msg = "<strong>Success! User Created :)</strong>" ;
-        var urll = 'http://localhost/photoGallery/index.php/admin/create_user/index/?username='+unlen+'&password='+pwd+'&first_name='+fn+'&last_name='+ln
+        var urll = 'http://localhost/photoGallery_new/index.php/admin/create_user/index/?username='+unlen+'&password='+pwd+'&first_name='+fn+'&last_name='+ln
 
       }
       else if (  this.className == "e_button" ){
@@ -54,7 +54,7 @@ $(document).ready(function(){
         var pr = 'e_pr' ;
         var form = '#e_form';
         var msg = "<strong>Success! User Records Updated :)</strong>" ;
-        var urll = 'http://localhost/photoGallery/index.php/admin/edit_user/index/?username='+unlen+'&password='+pwd+'&first_name='+fn+'&last_name='+ln+'&id='+id;
+        var urll = 'http://localhost/photoGallery_new/index.php/admin/edit_user/index/?username='+unlen+'&password='+pwd+'&first_name='+fn+'&last_name='+ln+'&id='+id;
       }
 
       document.getElementById(pr).innerHTML = "";
@@ -93,7 +93,7 @@ $(document).ready(function(){
                 $(this).before(msg);
                 setTimeout("$.fancybox.close()", 1000);
                 setTimeout( function(){
-                  window.location = "http://localhost/photoGallery/index.php/admin/manage_admins/";
+                  window.location = "http://localhost/photoGallery_new/index.php/admin/manage_admins/";
                 },1000);
               });
             }

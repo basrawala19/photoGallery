@@ -18,7 +18,7 @@ function load_contents(track_page){
     $.ajax({
         type: "POST",
         cache: false,
-        url: 'http://localhost/photoGallery/index.php/fetch_gallery/index/?page='+track_page, // success.php
+        url: 'http://localhost/photoGallery_new/index.php/fetch_gallery/index/?page='+track_page, // success.php
         success: function (data) {
         //alert(data) ;
         if(data.trim().length == 0){

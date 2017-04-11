@@ -1,4 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+#HybridAuth - social login plug-in
+require_once APPPATH.'/hybridauth-master/hybridauth/Hybrid/Auth.php';
+require_once APPPATH.'/hybridauth-master/vendor/autoload.php'; #Facebook API
 
 class Hauth extends CI_Controller {
 
@@ -22,22 +25,23 @@ class Hauth extends CI_Controller {
 
 		log_message('debug', "controllers.HAuth.login($provider) called");
 		$this->load->helper('url');
-		$this->load->library('HybridAuthLib');
+		$this->load->library('HybridAuthLib_new');
 
 		try
 		{
 
 			log_message('debug', 'gela akela controllers.HAuth.login: loading HybridAuthLib');
-			if ($this->hybridauthlib->providerEnabled($provider))
+			if ($this->hybridauthlib_new->providerEnabled($provider))
 			{
 				log_message('debug', "controllers.HAuth.login: service $provider enabled, trying to authenticate.");
-				$service = $this->hybridauthlib->authenticate($provider);
+				$service = $this->hybridauthlib_new->authenticate($provider);
 
 				if ($service->isUserConnected())
 				{
 					$user_profile = $service->getUserProfile();
 					$this->load->model('thirdpartyuser');
 					$user = thirdpartyuser::find_by_external_id ( $user_profile->external_id , $user_profile->provider ) ;
+
 
 					if ( !$user ){
 
@@ -125,18 +129,18 @@ class Hauth extends CI_Controller {
 		}
 
 		log_message('debug', 'controllers.HAuth.endpoint: loading the original HybridAuth endpoint script.');
-		require_once APPPATH.'/third_party/hybridauth/index.php';
+		require_once APPPATH.'/hybridauth-master/hybridauth/index.php';
 
 	}
 
 	public function logout($providerId){
 
-			$this->load->library('HybridAuthLib');
-			if ($this->hybridauthlib->providerEnabled($providerId))
+			$this->load->library('HybridAuthLib_new');
+			if ($this->hybridauthlib_new->providerEnabled($providerId))
 			{
-				if ($this->hybridauthlib->isConnectedWith($providerId))
+				if ($this->hybridauthlib_new->isConnectedWith($providerId))
 				{
-					$service = $this->hybridauthlib->getAdapter($providerId) ;
+					$service = $this->hybridauthlib_new->getAdapter($providerId) ;
 					$service->logout();
 
 				}

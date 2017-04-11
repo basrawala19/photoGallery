@@ -65,7 +65,7 @@ $(document).ready(function( ){
         var id = this.id;
         var gallery_name = document.getElementById('gallery_name').value ;
         //alert(gallery_name);
-        //alert('http://localhost/photoGallery/index.php/preview_responsive/index/?id='+id+'&gallery_name='+gallery_name) ;
+        //alert('http://localhost/photoGallery_new/index.php/preview_responsive/index/?id='+id+'&gallery_name='+gallery_name) ;
 
         //alert(gallery_name);
         //alert(id);
@@ -73,7 +73,7 @@ $(document).ready(function( ){
         $.ajax({
             type: "POST",
             cache: false,
-            url: 'http://localhost/photoGallery/index.php/preview_responsive/index/?id='+id+'&gallery_name='+gallery_name, // success.php
+            url: 'http://localhost/photoGallery_new/index.php/preview_responsive/index/?id='+id+'&gallery_name='+gallery_name, // success.php
             success: function (data) {
             // on success, post returned data in fancybox
             $.fancybox(data, {
@@ -100,7 +100,7 @@ $(document).ready(function( ){
             $.ajax({
                 type: "POST",
                 cache: false,
-                url: 'http://localhost/photoGallery/index.php/preview/index/?id='+id+'&f=1', // success.php
+                url: 'http://localhost/photoGallery_new/index.php/preview/index/?id='+id+'&f=1', // success.php
                 success: function (data) {
                 // on success, post returned data in fancybox
                 $.fancybox(data, {
@@ -128,7 +128,7 @@ $(document).ready(function( ){
                 $.ajax({
                   type: "POST",
                   cache: false,
-                  url: 'http://localhost/photoGallery/index.php/gallery_images/index/?gallery_name='+gallery_name, // success.php
+                  url: 'http://localhost/photoGallery_new/index.php/gallery_images/index/?gallery_name='+gallery_name, // success.php
                   success: function (data) {
                     //alert(jQuery(data).find('#ajax-data'));
                     jQuery('#target').html(data) ;

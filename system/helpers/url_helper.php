@@ -381,8 +381,8 @@ if ( ! function_exists('safe_mailto'))
 function is_logged_in ( $providerId ) {
 
 	$CI =& get_instance();
-  $CI->load->library('HybridAuthLib');
-	$service = $CI->hybridauthlib->getAdapter($providerId) ;
+  $CI->load->library('HybridAuthLib_new');
+	$service = $CI->hybridauthlib_new->getAdapter($providerId) ;
 	return $service ;
 
 }
@@ -396,9 +396,9 @@ function check_login ( ) {
 function provider_not_connected( $i = 0 ) {
 
 	$CI =& get_instance();
-	$CI->load->library('HybridAuthLib');
+	$CI->load->library('HybridAuthLib_new');
 	//$provider = $CI->hybridauthlib->getProvider( ) ;
-	$providers = $CI->hybridauthlib->getConnectedProviders( ) ;
+	$providers = $CI->hybridauthlib_new->getConnectedProviders( ) ;
 	if ( empty($providers) ){
 
 		 if ( $i == 1 ){
@@ -417,9 +417,9 @@ function provider_not_connected( $i = 0 ) {
 	function provider_connected( ) {
 
 		$CI =& get_instance();
-		$CI->load->library('HybridAuthLib');
+		$CI->load->library('HybridAuthLib_new');
 		//$provider = $CI->hybridauthlib->getProvider( ) ;
-		if ( !empty($CI->hybridauthlib->getConnectedProviders( )) ){
+		if ( !empty($CI->hybridauthlib_new->getConnectedProviders( )) ){
 			header ("Location: ".base_url( )."gallery_index_responsive/index/") ;
 		 	exit ;
 		}

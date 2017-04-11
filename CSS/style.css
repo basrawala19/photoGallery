@@ -133,10 +133,10 @@ li{
 #comment {
 	#padding:4em 4em ;
 	font-family:"Courier New", Courier, monospace;
-	background: url(../landingPage/img/tower.jpg) ;
+	##background: url(../landingPage/img/tower.jpg) ;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: black;
+  ##background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
